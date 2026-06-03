@@ -1,0 +1,255 @@
+/* 전체 화면 기본 설정 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f2f8;
+  color: #222;
+}
+
+/* 앱을 화면 가운데 배치 */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Todo 앱 카드 */
+.todo-card {
+  width: 400px;
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 제목 */
+.app-title {
+  text-align: center;
+  color: #672be0;
+  margin-bottom: 22px;
+  font-size: 28px;
+}
+
+/* 날짜 이동 영역 */
+.date-view-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1eef8;
+  padding: 12px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+/* 이전 / 다음 날짜 버튼 */
+.date-button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background-color: #672be0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.date-button:hover {
+  background-color: #5421bd;
+}
+
+/* 날짜 텍스트 영역 */
+.date-text-area {
+  text-align: center;
+}
+
+/* 작은 설명 텍스트 */
+.date-label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+/* 선택된 날짜 */
+.selected-date-text {
+  font-size: 15px;
+  font-weight: bold;
+  color: #672be0;
+}
+
+/* 입력창과 추가 버튼 영역 */
+.todo-input-area {
+  display: flex;
+  gap: 8px;
+}
+
+/* Todo 입력창 */
+.todo-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.todo-input:focus {
+  border-color: #672be0;
+}
+
+/* 추가 버튼 */
+.add-button {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #672be0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #5421bd;
+}
+
+/* 수정 중일 때 버튼 색상 */
+.add-button.editing {
+  background-color: #222;
+}
+
+/* 안내 메시지 */
+.message-text {
+  min-height: 20px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #e74c3c;
+}
+
+/* 필터 탭 영역 */
+.filter-tab-area {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  background-color: #f1eef8;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+/* 필터 탭 버튼 */
+.filter-tab {
+  flex: 1;
+  border: none;
+  border-radius: 9px;
+  padding: 8px 0;
+  background-color: transparent;
+  color: #777;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 현재 선택된 필터 탭 */
+.filter-tab.active {
+  background-color: #672be0;
+  color: white;
+}
+
+/* Todo 목록 */
+.todo-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+/* Todo 항목 */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Todo 텍스트 */
+.todo-text {
+  flex: 1;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+/* 완료된 Todo 텍스트 */
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* 수정 중인 Todo 표시 */
+.todo-text.editing {
+  color: #672be0;
+  font-weight: bold;
+}
+
+/* 버튼 묶음 */
+.todo-button-group {
+  display: flex;
+  gap: 5px;
+}
+
+/* 수정 / 완료 / 삭제 버튼 공통 */
+.todo-button {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* 수정 버튼 */
+.edit-button {
+  background-color: #ede6ff;
+  color: #672be0;
+}
+
+/* 완료 버튼 */
+.complete-button {
+  background-color: #e8f7ef;
+  color: #178a45;
+}
+
+/* 삭제 버튼 */
+.delete-button {
+  background-color: #ffe8e8;
+  color: #d93025;
+}
+
+/* Todo가 없을 때 표시 */
+.empty-text {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+/* localStorage에 저장된 Todo 전체 초기화 버튼 */
+.clear-storage-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f4f2f8;
+  color: #672be0;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.clear-storage-button:hover {
+  background-color: #ede6ff;
+}
