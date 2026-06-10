@@ -3,8 +3,8 @@
 ## 과제명: React로 Todo 앱 만들기
 
 - 과제 내용: Vanilla JS로 구현했던 Todo 앱을 React Function Component 구조로 마이그레이션
-- 브랜치명: `main`
-- 작업 폴더: `todo-vanilla/assignment2`
+- 브랜치명: `week-02-신유민`
+- 작업 폴더: `kakao-assignment-1/assignment2`
 - 주요 문서:
   - `README.md`
   - `docs/REACT_MIGRATION_PLAN.md`
